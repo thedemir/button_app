@@ -4,8 +4,13 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class Button extends StatelessWidget {
-  const Button({super.key, required this.text, required this.ontap});
+  const Button(
+      {super.key,
+      required this.text,
+      required this.ontap,
+      required this.borderColor});
   final String text;
+  final Color borderColor;
   final void Function() ontap;
 
   @override
@@ -18,9 +23,9 @@ class Button extends StatelessWidget {
           width: width * 0.7,
           height: height * 0.07,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.deepPurple[200],
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.white, width: 2),
+            border: Border.all(color: borderColor, width: 3),
           ),
           child: Center(
               child: Text(

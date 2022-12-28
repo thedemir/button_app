@@ -47,6 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
             Spacer(flex: 4),
             Button(
               text: "Zamanı Değiştir",
+              borderColor:
+                  isPressed ? ColorConst.sunColor : ColorConst.moonColor,
               ontap: () {
                 setState(() {
                   isPressed = !isPressed;
